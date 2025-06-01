@@ -12,25 +12,26 @@ html {
 
 /* Section */
 
-section{
+section {
     font-family: "Montserrat", sans-serif;
     width: 100vw;
     height: 100vh;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
-#loginImg{
+#loginImg {
     height: 100vh;
     width: 50vw;
 }
 
 /* Login form Section */
 
-.InputSec{
+.InputSec {
     width: 50vw;
     display: flex;
     justify-items: center;
@@ -38,7 +39,7 @@ section{
     align-items: center;
 }
 
-.InputForms{
+.InputForms {
     width: 58%;
     display: flex;
     flex-direction: column;
@@ -48,12 +49,12 @@ section{
     box-shadow: 0px 0px 3px #0003;
 }
 
-#logoRight{
+#logoRight {
     width: 100px;
     border-radius: 100%;
 }
 
-h2{
+h2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +62,7 @@ h2{
     margin: 10px 0;
 }
 
-#note{
+#note {
     color: #00000088;
     font-size: 1vw;
     display: flex;
@@ -69,12 +70,13 @@ h2{
     margin: 15px 0px;
 }
 
-label{
+label {
     font-size: 15px;
     font-weight: 600;
-}    
+}
 
-input,button{
+input,
+button {
     /* margin: 0px 0px 10px; */
     font-size: 16px;
     padding: 8px 10px;
@@ -83,17 +85,17 @@ input,button{
     box-shadow: 0px 0px 3px #00000051;
 }
 
-button{
+button {
     color: #fff;
     background-color: #5630ffc1;
 }
 
-p{
+p {
     font-size: 15px;
     margin: 0 10px;
 }
 
-.switchRole{
+.switchRole {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -101,7 +103,7 @@ p{
     margin: 20px 0
 }
 
-#goforms{
+#goforms {
     cursor: pointer;
     color: #5630ffc1;
     background-color: transparent;
@@ -111,9 +113,10 @@ p{
 
 /* Goo bckk */
 
-#goback{
+#goback {
+    color: #fff;
     font-size: 14px;
-    background-color: #ffffff76;
+    background-color: #0000004c;
     position: absolute;
     width: 80px;
     height: 30px;
@@ -124,4 +127,78 @@ p{
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 950px) {
+    #loginImg {
+        height: 0;
+        width: 0;
+        display: none;
+    }
+
+    /* Login form Section */
+
+    .InputSec {
+        width: 100vw;
+    }
+
+    .InputForms {
+        width: 65%;
+    }
+
+    #logoRight {
+        width: 70px;
+        border-radius: 100%;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 18px;
+        justify-content: flex-start;
+    }
+
+    #note {
+        color: #00000088;
+        font-size: 10px;
+        display: flex;
+        justify-self: center;
+        margin: 7px 0px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    input,
+    button {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 15px;
+        margin: 0 5px;
+    }
+
+    .switchRole {
+        margin: 5px 0;
+    }
+
+    /* Go back */
+
+    #goback {
+    font-size: 12px; 
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
 }

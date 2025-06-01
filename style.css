@@ -68,9 +68,10 @@ nav {
     cursor: pointer;
     margin: 0 15px;
     font-weight: 500;
+    font-size: 18px;
 }
 
-.navButton:hover{
+.navButton:hover {
     text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-offset: 6px;
@@ -79,28 +80,28 @@ nav {
 /* ------------------------------------------------ */
 
 .navButton {
-  position: relative;
+    position: relative;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 180%;
-  right: -50px;
-  min-width: 200px;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
-  z-index: 100;
+    display: none;
+    position: absolute;
+    top: 180%;
+    right: -50px;
+    min-width: 200px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    z-index: 100;
 }
 
 .dropdown-option {
-  padding: 10px 15px;
-  cursor: pointer;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
 .dropdown-option:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 
@@ -161,7 +162,7 @@ nav {
 
 .section1 p {
     color: #000000bd;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     top: 60%;
 }
 
@@ -236,6 +237,7 @@ nav {
 /* Techno Pharm working Rep */
 
 #Title1 {
+    font-size: 1.8vw;
     display: flex;
     justify-content: center;
     font-family: "Montserrat", sans-serif;
@@ -286,7 +288,6 @@ nav {
 
 footer {
     font-family: "Montserrat", sans-serif;
-
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -294,7 +295,7 @@ footer {
     gap: 50px;
 }
 
-#feedback{
+#feedback {
     margin: 50px 0;
     width: 50vw;
     display: flex;
@@ -305,18 +306,18 @@ footer {
     align-items: center;
 }
 
-#db-title{
+#db-title {
     font-size: 1.2vw;
     font-weight: 600;
 }
 
-#feedgo{
+#feedgo {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-#feedbackIn{
+#feedbackIn {
     width: 300px;
     padding: 8px 15px;
     font-size: 16px;
@@ -325,7 +326,7 @@ footer {
     box-shadow: 0px 0px 3px #0003;
 }
 
-#sub-feedback{
+#sub-feedback {
     color: #fff;
     background-color: #5630ffc1;
     padding: 8px 15px;
@@ -336,13 +337,329 @@ footer {
     cursor: pointer;
 }
 
-#sub-feedback:hover{
+#sub-feedback:hover {
     background-color: #5630ffe7;
 }
 
 #copy {
     display: flex;
     justify-content: center;
-    font-size: 1vw;
+    font-size: 15px;
     font-weight: 300;
+}
+
+@media screen and (min-width: 500px) and (max-width: 950px) {
+    nav {
+        padding: 8px;
+    }
+
+    #imgLogo {
+        width: 70px;
+        margin: 0 8px;
+    }
+
+    .logo {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .navButton {
+        margin: 0 12px;
+        font-size: 15px;
+    }
+
+    /* section 1 */
+
+    .section1 {
+        margin: 30px 0 40px;
+        padding: 0;
+    }
+
+    #homeImg {
+        width: 85%;
+        border-radius: 8px;
+    }
+
+    .section1 h1 {
+        font-size: 4.5vw;
+    }
+
+    .section1 p {
+        color: #000000;
+        font-size: 1.6vw;
+        top: 60%;
+    }
+
+    /* Section 2 */
+
+    .section2 {
+        padding: 10px 10px 20px;
+    }
+
+    .section2 h2 {
+        font-size: 2.7vw;
+        margin: 12px 8px;
+    }
+
+    .section2 p {
+        font-size: 1.9vw;
+        margin: 6px;
+    }
+
+    #prob-states {
+        width: 65vw;
+        margin: 20px 10px;
+        height: 90px;
+        padding: 15px;
+        font-size: 12px;
+        word-spacing: 1px;
+        line-height: 14px;
+    }
+
+    .section2 #giveSolution {
+        width: 90%;
+        padding: 8px;
+        display: flex;
+        font-size: 14px;
+    }
+
+    /* Techno Pharm working Rep */
+
+    #Title1 {
+        margin: 30px;
+        font-size: 2.5vw;
+    }
+
+    /* section 3 */
+
+    .section3 {
+        width: 100%;
+    }
+
+    .box {
+        width: 24%;
+        padding: 10px;
+    }
+
+    .box #icon img {
+        margin: 10px;
+        width: 30px;
+        display: flex;
+        justify-self: center;
+    }
+
+    .box .box-title {
+        font-weight: 600;
+        font-size: 12px;
+        margin: 3px 3px 7px;
+    }
+
+    .box .box-desc {
+        margin: 3px;
+        font-size: 11px;
+    }
+
+    /* footer */
+
+    footer {
+        margin: 10px;
+        gap: 20px;
+    }
+
+    #feedback {
+        margin: 40px 0;
+        width: auto;
+        gap: 30px;
+    }
+
+
+    #db-title {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    #feedgo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    #feedbackIn {
+        width: 330px;
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+
+    #sub-feedback {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    #copy {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+}
+
+
+/* -------------------  Mobile Scale  --------------  */
+
+@media screen and (max-width: 500px) {
+    nav {
+        padding: 5px;
+    }
+
+
+    #imgLogo {
+        width: 50px;
+        margin: 0 5px;
+    }
+
+    .logo {
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .navButton {
+        margin: 0 8px;
+        font-size: 11px;
+    }
+
+    /* section 1 */
+
+    .section1 {
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    #homeImg {
+        width: 90%;
+        border-radius: 8px;
+    }
+
+    .section1 h1 {
+        font-size: 5vw;
+    }
+
+    .section1 p {
+        color: #000000;
+        font-size: 2vw;
+        top: 60%;
+    }
+
+    /* Section 2 */
+
+    .section2 {
+        padding: 10px 20px;
+    }
+
+    .section2 h2 {
+        font-size: 12px;
+        margin: 8px;
+    }
+
+    .section2 p {
+        font-size: 8px;
+        margin: 6px;
+    }
+
+    #prob-states {
+        width: 75vw;
+        margin: 10px;
+        height: 90px;
+        padding: 8px;
+        font-size: 10px;
+        word-spacing: 1px;
+        line-height: 12px;
+    }
+
+    .section2 #giveSolution {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        font-size: 10px;
+    }
+
+    /* Techno Pharm working Rep */
+
+    #Title1 {
+        margin: 20px;
+        font-size: 13px;
+    }
+
+    /* section 3 */
+
+    .section3 {
+        width: 100%;
+    }
+
+    .boxContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .box {
+        width: 60%;
+        padding: 10px;
+    }
+
+    .box #icon img {
+        margin: 10px;
+        width: 38px;
+        display: flex;
+        justify-self: center;
+    }
+
+    .box .box-title {
+        font-weight: 600;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .box .box-desc {
+        margin: 5px;
+        font-size: 10px;
+    }
+
+    /* footer */
+
+    footer {
+        margin: 10px;
+        gap: 10px;
+    }
+
+    #feedback {
+        margin: 20px 0;
+        width: auto;
+        gap: 10px;
+    }
+
+    #db-title {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    #feedgo {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #feedbackIn {
+        width: 200px;
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+
+    #sub-feedback {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    #copy {
+        font-size: 10px;
+        font-weight: 300;
+    }
+
 }
