@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ico.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="login.css">
+    <title>Welcome to Techno Pharms.</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+
+            <div id="goback"> ◀ Home</div>
+
+            <img src="src/login.avif" alt="login" id="loginImg">
+
+            <div class="InputSec">
+                <div class="InputForms" id="userForm" style="display: none;">
+
+                    <img src="src/logo.avif" alt="logo" srcset="" id="logoRight">
+                
+                    <h2>Welcome back, Let's Solve your trouble.</h2>
+                    
+                    <div id="note">Enter your credentials to access your solutions and services.</div>
+
+                    <label for="user-email">Enter User Email.</label>
+                    <input type="email" name="user-email" id="user-email" placeholder="user@gmail.com">
+                    
+                    <label for="user-password">Enter password.</label>
+                    <input type="password" name="user-password" id="user-password" placeholder="••••••">
+
+                    <button>Login</button>
+                    
+                    <div class="switchRole">
+                        <p>Are you a shopkeeper?</p>
+                        <button onclick="showShopkeeperForm()" id="goforms">Login as Shopkeeper</button>
+                    </div>
+
+                </div>
+
+                <div class="InputForms" id="shopkeeperForm" style="display: none;">
+
+                    <img src="src/logo.avif" alt="logo" srcset="" id="logoRight">
+
+                    <h2>Welcome Expert, Lets solve the troubles.</h2>
+                    
+                    <div id="note">Enter your credentials to access your solutions and services.</div>
+
+                    <label for="Shopkeeper-email">Enter Shopkeeper Email.</label>
+                    <input type="email" name="Shopkeeper-email" id="Shopkeeper-email" placeholder="shopkeeper@gmail.com">
+                    
+                    <label for="Shopkeeper-password">Enter password.</label>
+                    <input type="password" name="Shopkeeper-password" id="Shopkeeper-password" placeholder="••••••">
+
+                    <button>Login</button>
+                    
+                    <div class="switchRole">
+                        <p>Are you a User?</p>
+                        <button onclick="showUserForm()" id="goforms">Login as User</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="login.js"></script>
+</body>
+
+</html>

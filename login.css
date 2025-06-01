@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Montserrat", sans-serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section */
+
+section{
+    font-family: "Montserrat", sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+#loginImg{
+    height: 100vh;
+    width: 50vw;
+}
+
+/* Login form Section */
+
+.InputSec{
+    width: 50vw;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.InputForms{
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #0003;
+}
+
+#logoRight{
+    width: 100px;
+    border-radius: 100%;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000a2;
+    margin: 10px 0;
+}
+
+#note{
+    color: #00000088;
+    font-size: 1vw;
+    display: flex;
+    justify-self: center;
+    margin: 15px 0px;
+}
+
+label{
+    font-size: 15px;
+    font-weight: 600;
+}    
+
+input,button{
+    /* margin: 0px 0px 10px; */
+    font-size: 16px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: transparent;
+    box-shadow: 0px 0px 3px #00000051;
+}
+
+button{
+    color: #fff;
+    background-color: #5630ffc1;
+}
+
+p{
+    font-size: 15px;
+    margin: 0 10px;
+}
+
+.switchRole{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0
+}
+
+#goforms{
+    cursor: pointer;
+    color: #5630ffc1;
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+/* Goo bckk */
+
+#goback{
+    font-size: 14px;
+    background-color: #ffffff76;
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}

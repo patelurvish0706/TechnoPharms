@@ -1,4 +1,18 @@
-const registerBtn = document.getElementById("Register");
+
+// ------------------------------- Go to Login Page ------------------------------------
+
+document.getElementById("goasUser").addEventListener("click", function () {
+    window.location.href = "login.html?role=user";
+});
+
+document.getElementById("goasShopkeeper").addEventListener("click", function () {
+    window.location.href = "login.html?role=shopkeeper";
+});
+
+
+// ------------------------------ Login list selector ------------------------------
+
+const registerBtn = document.getElementById("Login");
 const dropdown = document.getElementById("dropdown");
 
 // Toggle dropdown on click
@@ -12,7 +26,7 @@ document.addEventListener("click", function () {
     dropdown.style.display = "none";
 });
 
-// ----------------------------- Animations and Effects. --------------------
+// ----------------------------- Animations and Effects. ---------------------------
 
 const faders = document.querySelectorAll('.fade-in');
 

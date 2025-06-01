@@ -25,7 +25,6 @@ html {
     transform: translateY(0);
 }
 
-
 /* nav */
 
 nav {
@@ -71,6 +70,12 @@ nav {
     font-weight: 500;
 }
 
+.navButton:hover{
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 6px;
+}
+
 /* ------------------------------------------------ */
 
 .navButton {
@@ -81,7 +86,7 @@ nav {
   display: none;
   position: absolute;
   top: 180%;
-  right: 0;
+  right: -50px;
   min-width: 200px;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
