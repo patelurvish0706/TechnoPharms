@@ -2,15 +2,17 @@
 // ------------------------------- Go to Login and Register Page ------------------------------------
 
 document.getElementById("goasUser").addEventListener("click", function () {
-    window.location.href = "../login.html?role=user";
+    // window.location.href = "../login.html?role=user";
+    window.location.href = window.location.origin + "/TechnoPharms/login.html?role=user";
+
 });
 
 document.getElementById("goasShopkeeper").addEventListener("click", function () {
-    window.location.href = "../login.html?role=shopkeeper";
+    window.location.href = window.location.origin + "/TechnoPharms/login.html?role=shopkeeper";
 });
 
 document.getElementById("Register").addEventListener("click", function () {
-    window.location.href = "../register.html?role=user";
+    window.location.href = window.location.origin + "/TechnoPharms/register.html?role=user";
 });
 
 // ------------------------------ Login list selector ------------------------------
