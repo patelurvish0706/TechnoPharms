@@ -10,11 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-body::-webkit-scrollbar{
-    display: none;
-}
-
 /* Section */
 
 section {
@@ -39,7 +34,6 @@ section {
 .InputSec {
     width: 50vw;
     display: flex;
-    flex-direction: column;
     justify-items: center;
     justify-content: center;
     align-items: center;
@@ -50,13 +44,13 @@ section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px 30px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0px 0px 3px #0003;
 }
 
 #logoRight {
-    width: 80px;
+    width: 100px;
     border-radius: 100%;
 }
 
@@ -65,14 +59,15 @@ h2 {
     align-items: center;
     justify-content: center;
     color: #000000a2;
+    margin: 10px 0;
 }
 
 #note {
     color: #00000088;
-    font-size: 1.2vw;
+    font-size: 1vw;
     display: flex;
     justify-self: center;
-    margin: 10px 0px;
+    margin: 15px 0px;
 }
 
 label {
@@ -87,8 +82,7 @@ button {
     padding: 8px 10px;
     border-radius: 4px;
     border: transparent;
-    box-shadow: 0px 0px 3px #00000051;     
-    letter-spacing: 1px;
+    box-shadow: 0px 0px 3px #00000051;
 }
 
 button {

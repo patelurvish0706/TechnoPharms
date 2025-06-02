@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="styles/ico.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="icon" href="ico.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="login.css">
     <title>Welcome to Techno Pharms.</title>
 </head>
 
@@ -24,7 +24,7 @@
                 
                     <h2>Welcome back, Let's Solve your trouble.</h2>
                     
-                    <div id="note">Note: Login as User here.🧔🏻</div>
+                    <div id="note">Enter your credentials to access your solutions and services.</div>
 
                     <label for="user-email">Enter User Email.</label>
                     <input type="email" name="user-email" id="user-email" placeholder="user@gmail.com">
@@ -32,7 +32,7 @@
                     <label for="user-password">Enter password.</label>
                     <input type="password" name="user-password" id="user-password" placeholder="••••••">
 
-                    <button id="login-user-getIn">Login</button>
+                    <button>Login</button>
                     
                     <div class="switchRole">
                         <p>Are you a shopkeeper?</p>
@@ -47,28 +47,26 @@
 
                     <h2>Welcome Expert, Lets solve the troubles.</h2>
                     
-                    <div id="note">Note: Login as Shopkeeper here.👨🏻‍🔧</div>
+                    <div id="note">Enter your credentials to access your solutions and services.</div>
 
-                    <label for="shopkeeper-email">Enter Shopkeeper Email.</label>
-                    <input type="email" name="shopkeeper-email" id="shopkeeper-email" placeholder="shopkeeper@gmail.com">
+                    <label for="Shopkeeper-email">Enter Shopkeeper Email.</label>
+                    <input type="email" name="Shopkeeper-email" id="Shopkeeper-email" placeholder="shopkeeper@gmail.com">
                     
-                    <label for="shopkeeper-password">Enter password.</label>
-                    <input type="password" name="shopkeeper-password" id="shopkeeper-password" placeholder="••••••">
+                    <label for="Shopkeeper-password">Enter password.</label>
+                    <input type="password" name="Shopkeeper-password" id="Shopkeeper-password" placeholder="••••••">
 
-                    <button id="login-user-getIn">Login</button>
+                    <button>Login</button>
                     
                     <div class="switchRole">
                         <p>Are you a User?</p>
                         <button onclick="showUserForm()" id="goforms">Login as User</button>
                     </div>
-
                 </div>
-                <button onclick="window.location.href = '../register.html';" id="goforms">Register</button>
             </div>
-            
+
         </div>
     </section>
-    <script src="scripts/login.js"></script>
+    <script src="login.js"></script>
 </body>
 
 </html>
