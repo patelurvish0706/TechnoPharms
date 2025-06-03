@@ -1,5 +1,5 @@
-const API_KEY = '';
-const YT_API_KEY = '';
+const API_KEY = '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';
+const YT_API_KEY = 'AIzaSyBbSaGqJvWNdOJnwA58VoIIUXsBA1ZD8Pc';
 
 
 // -------------------- Event Listener for "giveSolution" Button --------------------

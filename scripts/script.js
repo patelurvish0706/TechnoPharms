@@ -1,9 +1,9 @@
 // ------------------------------- Go to Login and Register Page ------------------------------------
 
-// document.getElementById("Home").addEventListener("click", function () {
-//     // window.location.href = window.location.origin + "/index.html";
-//     window.location.href = window.location.origin + "/TechnoPharms/index.html";
-// });
+document.getElementById("Home").addEventListener("click", function () {
+    // window.location.href = window.location.origin + "/index.html";
+    window.location.href = window.location.origin + "/TechnoPharms/index.html";
+});
 
 document.getElementById("goasUser").addEventListener("click", function () {
     // window.location.href = "../login.html?role=user";
