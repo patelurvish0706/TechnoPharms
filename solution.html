@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="styles/ico.svg" type="image/svg+xml">
+    <title>Techno Pharms - Always to help.🔧</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/solution.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="src/logo2.avif" alt="" srcset="" id="imgLogo" loading="lazy">Techno Pharms
+        </div>
+        <div class="buttons">
+            <!-- <div class="navButton" id="Home">Home</div> -->
+            <div class="navButton activePage" id="solution">Solution</div>
+            <div class="navButton" id="Login">Login
+                <div class="dropdown-content" id="dropdown">
+                    <div class="dropdown-option" id="goasUser">As a User</div>
+                    <div class="dropdown-option" id="goasShopkeeper">As a Shopkeeper</div>
+                </div>
+            </div>
+            <div class="navButton" id="Register">Register</div>
+        </div>
+    </nav>
+
+    <div class="sapLine"></div>
+
+    <section class="sectionSolution">
+        <div id="solutionContainer">
+
+            <div id="videoContainer">
+                <div class="video-wrapper">
+                    <!-- <h2>YouTube Video Search</h2>
+                    <input type="text" id="searchInput" placeholder="Search for videos..." />
+                    <button onclick="searchVideos()">Search</button> -->
+                    <div id="videoResults"></div>
+                </div>
+            </div>
+
+            <div id="aiContainer">
+                <div class="chat-wrapper">
+                    <h2>Ask the AI</h2>
+                    <div id="chatMessages" class="chat-box"></div>
+                    <form id="chatForm">
+                        <input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off"
+                            required />
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/solution.js"></script>
+</body>
+
+</html>
