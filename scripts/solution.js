@@ -1,4 +1,5 @@
-const API_KEY = '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';
+// const API_KEY = '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';
+const API_KEY = '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';
 const YT_API_KEY = 'AIzaSyBbSaGqJvWNdOJnwA58VoIIUXsBA1ZD8Pc';
 
 
@@ -18,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
             sessionStorage.removeItem('youtubePrompt');
 
             // window.location.href = 'solution.html';
-            window.location.href = window.location.origin + "/TechnoPharms/solution.html";
+            // window.location.href = window.location.origin + "/TechnoPharms/solution.html";
+            redirectWithFallback('../solution.html', window.location.href = window.location.origin + "/TechnoPharms/solution.html")
         });
     }
 });
@@ -38,7 +40,8 @@ if (initialQuery && !hasInitialQueryProcessed) {
             'X-Title': 'YouTube Prompt Generator'
         },
         body: JSON.stringify({
-            model: 'meta-llama/llama-3.2-3b-instruct:free',
+            // model: 'meta-llama/llama-3.2-3b-instruct:free',//deepseek/deepseek-r1-0528-qwen3-8b:free
+            model: 'deepseek/deepseek-r1-0528-qwen3-8b:free',
             messages: [
                 {
                     role: 'system',
@@ -225,7 +228,7 @@ chatForm.addEventListener('submit', async (e) => {
             'X-Title': 'Simple AI Chat'
         },
         body: JSON.stringify({
-            model: 'meta-llama/llama-3.2-3b-instruct:free',
+            model: 'deepseek/deepseek-r1-0528-qwen3-8b:free',
             messages: chatHistory
         })
     });
@@ -273,3 +276,29 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+// redirect with validation
+function redirectWithFallback(primaryUrl, fallbackUrl) {
+    fetch(primaryUrl, { method: 'HEAD' })
+        .then(response => {
+            if (response.ok) {
+                window.location.href = primaryUrl;
+            } else {
+                window.location.href = fallbackUrl;
+            }
+        })
+        .catch(() => {
+            window.location.href = fallbackUrl;
+        });
+}
+
+document.getElementById("back").addEventListener("click", function () {
+    // window.location.href = window.location.origin + "/index.html";
+    // window.location.href = window.location.origin + "/TechnoPharms/index.html";
+    redirectWithFallback(window.location.origin + "/index.html",window.location.origin + "/TechnoPharms/index.html")
+});
+
+document.getElementById("NearByShop").addEventListener("click", function () {
+    // window.location.href = window.location.origin + "/NearByShop.html";
+    // window.location.href = window.location.origin + "/TechnoPharms/NearByShop.html";
+    redirectWithFallback(window.location.origin + "/NearByShop.html", window.location.origin + "/TechnoPharms/NearByShop.html")
+});

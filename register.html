@@ -21,17 +21,14 @@
                 <div class="InputForms" id="userForm" style="display: none;">
 
                     <img src="src/logo.avif" alt="logo" srcset="" id="logoRight">
-                
+
                     <h2>Welcome to TechnoPharms, Get Rid off Trouble.</h2>
-                    
+
                     <div id="note">Note: Register as User here.🧔🏻</div>
 
                     <label for="reg-user-email">Enter User Email</label>
                     <input type="email" name="reg-user-email" id="reg-user-email" placeholder="user@gmail.com">
 
-                    <label for="reg-user-phone">Enter Contact Number</label>
-                    <input type="tel" name="reg-user-phone" id="reg-user-phone" placeholder="987456321">
-                    
                     <label for="reg-user-password">Enter password</label>
                     <input type="password" name="reg-user-password" id="reg-user-password" placeholder="••••••">
 
@@ -39,7 +36,7 @@
                     <input type="password" name="reg-user-repassword" id="reg-user-repassword" placeholder="••••••">
 
                     <button id="reg-user-getIn">Register Me</button>
-                    
+
                     <div class="switchRole">
                         <p>Are you a shopkeeper?</p>
                         <button onclick="showShopkeeperForm()" id="goforms">Register as Shopkeeper</button>
@@ -47,7 +44,7 @@
 
                 </div>
 
-                <div class="InputForms" id="shopkeeperForm" style="display: none;">
+                 <div class="InputForms" id="shopkeeperForm" style="display: none;">
 
                     <img src="src/logo.avif" alt="logo" srcset="" id="logoRight">
 
@@ -55,19 +52,16 @@
                     
                     <div id="note">Note: Register as Shopkeeper here.👨🏻‍🔧</div>
 
-                    <label for="reg-shopkeeper-email">Enter Shopkeeper Email.</label>
+                    <label for="reg-shopkeeper-email">Enter Shopkeeper Email.*</label>
                     <input type="email" name="reg-shopkeeper-email" id="reg-shopkeeper-email" placeholder="shopkeeper@gmail.com">
 
-                    <label for="reg-shopkeeper-phone">Enter Contact Number</label>
-                    <input type="tel" name="reg-shopkeeper-phone" id="reg-shopkeeper-phone" placeholder="987456321">
-
-                    <label for="reg-shopkeeper-password">Enter password.</label>
+                    <label for="reg-shopkeeper-password">Enter password.*</label>
                     <input type="password" name="reg-shopkeeper-password" id="reg-shopkeeper-password" placeholder="••••••">
                     
-                    <label for="reg-shopkeeper-repassword">Re-enter password.</label>
+                    <label for="reg-shopkeeper-repassword">Re-enter password.*</label>
                     <input type="password" name="reg-shopkeeper-repassword" id="reg-shopkeeper-repassword" placeholder="••••••">
 
-                    <button id="reg-shoopkeeper-getIn">Register Me</button>
+                    <button id="reg-shoopkeeper-getIn" onclick="reg_shoopkeeper_getIn()">Register Me</button>
                     
                     <div class="switchRole">
                         <p>Are you a User?</p>
@@ -75,7 +69,7 @@
                     </div>
                 </div>
 
-                <button onclick="window.location.href = window.location.origin + '/TechnoPharms/login.html';" id="goforms">Login</button>
+                <button onclick="goLogin()" id="goforms">Login</button>
 
 
             </div>
