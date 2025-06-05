@@ -21,19 +21,19 @@
                 <div class="InputForms" id="userForm" style="display: none;">
 
                     <img src="src/logo.avif" alt="logo" srcset="" id="logoRight">
-                
-                    <h2>Welcome back, Let's Solve your trouble.</h2>
-                    
-                    <div id="note">Note: Login as User here.🧔🏻</div>
+
+                    <h2>🧔🏻 Welcome back, Let's Solve your trouble.</h2>
+
+                    <div id="note">Note: Login as User here.</div>
 
                     <label for="user-email">Enter User Email.</label>
                     <input type="email" name="user-email" id="user-email" placeholder="user@gmail.com">
-                    
+
                     <label for="user-password">Enter password.</label>
                     <input type="password" name="user-password" id="user-password" placeholder="••••••">
 
                     <button id="login-user-getIn">Login</button>
-                    
+
                     <div class="switchRole">
                         <p>Are you a shopkeeper?</p>
                         <button onclick="showShopkeeperForm()" id="goforms">Login as Shopkeeper</button>
@@ -45,18 +45,50 @@
 
                     <img src="src/logo.avif" alt="logo" srcset="" id="logoRight">
 
-                    <h2>Welcome Expert, Lets solve the troubles.</h2>
-                    
-                    <div id="note">Note: Login as Shopkeeper here.👨🏻‍🔧</div>
+                    <h2>👨🏻‍🔧 Welcome Expert, Lets solve the troubles.</h2>
+
+                    <div id="note">Note: Login as Shopkeeper here.</div>
 
                     <label for="shopkeeper-email">Enter Shopkeeper Email.</label>
-                    <input type="email" name="shopkeeper-email" id="shopkeeper-email" placeholder="shopkeeper@gmail.com">
-                    
+                    <input type="email" name="shopkeeper-email" id="shopkeeper-email"
+                        placeholder="shopkeeper@gmail.com">
+
                     <label for="shopkeeper-password">Enter password.</label>
                     <input type="password" name="shopkeeper-password" id="shopkeeper-password" placeholder="••••••">
 
-                    <button id="login-user-getIn">Login</button>
-                    
+                    <button id="login-shopkeeper-getIn" onclick="login_Shopkeeper_getIn()">Login</button>
+
+                    <script>
+                        function login_Shopkeeper_getIn() {
+                            const email = document.getElementById("shopkeeper-email").value.trim();
+                            const password = document.getElementById("shopkeeper-password").value;
+
+                            if (!email || !password) {
+                                alert("Please enter email and password.");
+                                return;
+                            }
+
+                            fetch("scripts/login.php", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ email, password })
+                            })
+                                .then(res => res.json())
+                                .then(data => {
+                                    if (data.success) {
+                                        window.location.href = "scripts/dashboard.php"; // Protected page
+                                    } else {
+                                        alert(data.message);
+                                    }
+                                })
+                                .catch(err => {
+                                    console.error(err);
+                                    alert("Login failed.");
+                                });
+                        }
+                    </script>
+
+
                     <div class="switchRole">
                         <p>Are you a User?</p>
                         <button onclick="showUserForm()" id="goforms">Login as User</button>
@@ -65,9 +97,10 @@
                 </div>
                 <button onclick="goRegister()" id="goforms">Register</button>
             </div>
-            
+
         </div>
     </section>
+
     <script src="scripts/login.js"></script>
 </body>
 

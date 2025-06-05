@@ -44,25 +44,74 @@
 
                 </div>
 
-                 <div class="InputForms" id="shopkeeperForm" style="display: none;">
+                <div class="InputForms" id="shopkeeperForm" style="display: none;">
 
                     <img src="src/logo.avif" alt="logo" srcset="" id="logoRight">
 
                     <h2>Welcome Expert, Lets Crack Off Tech Stucks.</h2>
-                    
+
                     <div id="note">Note: Register as Shopkeeper here.👨🏻‍🔧</div>
 
                     <label for="reg-shopkeeper-email">Enter Shopkeeper Email.*</label>
-                    <input type="email" name="reg-shopkeeper-email" id="reg-shopkeeper-email" placeholder="shopkeeper@gmail.com">
+                    <input type="email" name="reg-shopkeeper-email" id="reg-shopkeeper-email"
+                        placeholder="shopkeeper@gmail.com">
 
                     <label for="reg-shopkeeper-password">Enter password.*</label>
-                    <input type="password" name="reg-shopkeeper-password" id="reg-shopkeeper-password" placeholder="••••••">
-                    
+                    <input type="password" name="reg-shopkeeper-password" id="reg-shopkeeper-password"
+                        placeholder="••••••">
+
                     <label for="reg-shopkeeper-repassword">Re-enter password.*</label>
-                    <input type="password" name="reg-shopkeeper-repassword" id="reg-shopkeeper-repassword" placeholder="••••••">
+                    <input type="password" name="reg-shopkeeper-repassword" id="reg-shopkeeper-repassword"
+                        placeholder="••••••">
 
                     <button id="reg-shoopkeeper-getIn" onclick="reg_shoopkeeper_getIn()">Register Me</button>
-                    
+
+                    <script>
+                        function reg_shoopkeeper_getIn() {
+                            const email = document.getElementById("reg-shopkeeper-email").value.trim();
+                            const password = document.getElementById("reg-shopkeeper-password").value;
+                            const repassword = document.getElementById("reg-shopkeeper-repassword").value;
+
+                            // Simple email regex
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                            if (!email || !password || !repassword) {
+                                alert("All fields are required.");
+                                return;
+                            }
+
+                            if (!emailRegex.test(email)) {
+                                alert("Please enter a valid email address.");
+                                return;
+                            }
+
+                            if (password.length < 6) {
+                                alert("Password must be at least 6 characters.");
+                                return;
+                            }
+
+                            if (password !== repassword) {
+                                alert("Passwords do not match.");
+                                return;
+                            }
+
+                            // Send to PHP via Fetch
+                            fetch("scripts/register.php", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ email, password })
+                            })
+                                .then(res => res.text())
+                                .then(response => {
+                                    alert(response);
+                                })
+                                .catch(err => {
+                                    console.error(err);
+                                    alert("Something went wrong.");
+                                });
+                        }
+                    </script>
+
                     <div class="switchRole">
                         <p>Are you a User?</p>
                         <button onclick="showUserForm()" id="goforms">Register as User</button>
@@ -76,6 +125,7 @@
 
         </div>
     </section>
+
     <script src="scripts/login.js"></script>
 </body>
 

@@ -10,6 +10,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* Efffect on Load */
 
 .fade-in {
@@ -350,6 +354,11 @@ footer {
     font-weight: 300;
 }
 
+.formcontainer {
+    width: 60vw;
+    font-size: 16px;
+}
+
 @media screen and (min-width: 500px) and (max-width: 950px) {
     nav {
         padding: 8px;
@@ -500,6 +509,11 @@ footer {
     #copy {
         font-size: 12px;
         font-weight: 300;
+    }
+
+    .formcontainer {
+        width: 80vw;
+        font-size: 15px;
     }
 
 }
@@ -664,4 +678,8 @@ footer {
         font-weight: 300;
     }
 
+    .formcontainer {
+        width: 90vw;
+        font-size: 14px;
+    }
 }

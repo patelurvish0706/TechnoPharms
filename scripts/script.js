@@ -34,7 +34,7 @@ document.getElementById("goasShopkeeper").addEventListener("click", function () 
 
 document.getElementById("Register").addEventListener("click", function () {
     // window.location.href = window.location.origin + "/TechnoPharms/register.html?role=user";
-    redirectWithFallback("../register.html?role=user",window.location.origin + "/TechnoPharms/login.html?role=user")
+    redirectWithFallback("../register.html?role=user",window.location.origin + "/TechnoPharms/register.html?role=user")
 });
 
 // ------------------------------ Login list selector ------------------------------
