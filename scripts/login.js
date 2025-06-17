@@ -45,9 +45,9 @@ function redirectWithFallback(primaryUrl, fallbackUrl) {
 }
 
 function goRegister() {
-    redirectWithFallback(window.location.origin + "/register.html", window.location.origin + "/TechnoPharms/register.html")
+    window.location.href = "register.html";
 }
 
 function goLogin() {
-    redirectWithFallback(window.location.origin + "/login.html", window.location.origin + "/TechnoPharms/login.html")
+    window.location.href = "login.html";
 }

@@ -1,13 +1,13 @@
 // ------------------------------ Login list selector ------------------------------
 
-const registerBtn = document.getElementById("Login");
+const loginBtn = document.getElementById("Login");
 const dropdown = document.getElementById("dropdown");
 
 // Toggle dropdown on click
-registerBtn.addEventListener("click", function (e) {
-    e.stopPropagation(); // Prevent click from bubbling up
+function loginShow(event) {
+    event.stopPropagation(); // Prevent click from bubbling up
     dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-});
+};
 
 // Close dropdown when clicking anywhere else
 document.addEventListener("click", function () {

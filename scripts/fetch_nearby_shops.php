@@ -20,7 +20,9 @@ function haversine($lat1, $lon1, $lat2, $lon2) {
 
 $userLat = isset($_GET['lat']) ? floatval($_GET['lat']) : 23.0305;
 $userLon = isset($_GET['lon']) ? floatval($_GET['lon']) : 72.5649;
-$maxDistanceKm = 3.0; // ← LIMIT HERE
+
+// $maxDistanceKm = 3.0; // ← LIMIT HERE
+$maxDistanceKm = 6.0;
 
 $sql = "SELECT * FROM techshops";
 $result = $conn->query($sql);

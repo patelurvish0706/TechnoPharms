@@ -56,18 +56,21 @@ function fetchAndDisplayShops(lat, lon) {
 function initMap() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(pos => {
-            const lat = pos.coords.latitude;
-            const lon = pos.coords.longitude;
-            map.setView([lat, lon], 14);
+            // const lat = pos.coords.latitude;
+            const lat = 23.115618
+            // const lon = pos.coords.longitude;
+            const lon = 72.630207;
+            map.setView([lat, lon], 13);
             addUserMarker(lat, lon);
             fetchAndDisplayShops(lat, lon);
         }, () => {
             alert("Location denied. Using default (Ahmedabad).");
-            fetchAndDisplayShops(23.0305, 72.5649);
+            fetchAndDisplayShops(23.115618, 72.630207);
+            // 23.115618, 72.630207
         });
     } else {
         alert("Geolocation not supported.");
-        fetchAndDisplayShops(23.0305, 72.5649);
+        fetchAndDisplayShops(72.630207, 72.630207);
     }
 }
 

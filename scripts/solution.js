@@ -3,26 +3,6 @@ const YT_API_KEY = 'AIzaSyBbSaGqJvWNdOJnwA58VoIIUXsBA1ZD8Pc';
 
 
 // -------------------- Event Listener for "giveSolution" Button --------------------
-// document.addEventListener('DOMContentLoaded', () => {
-//     const solutionBtn = document.getElementById('giveSolution');
-//     if (solutionBtn) {
-//         solutionBtn.addEventListener('click', function (e) {
-//             e.preventDefault();
-//             const userInput = document.getElementById('prob-states').value.trim();
-//             if (!userInput) {
-//                 alert("Please enter your device's issue.");
-//                 return;
-//             }
-//             sessionStorage.setItem('initialQuery', userInput);
-//             sessionStorage.setItem('initialProcessed', 'false');
-//             sessionStorage.removeItem('youtubePrompt');
-
-//             // window.location.href = 'solution.html';
-//             // window.location.href = window.location.origin + "/TechnoPharms/solution.html";
-//             redirectWithFallback('../solution.html', window.location.href = window.location.origin + "/TechnoPharms/solution.html")
-//         });
-//     }
-// });
 
 function giveSolution(event) {
     event.preventDefault();
@@ -302,9 +282,3 @@ function redirectWithFallback(primaryUrl, fallbackUrl) {
             window.location.href = fallbackUrl;
         });
 }
-
-document.getElementById("back").addEventListener("click", function () {
-    // window.location.href = window.location.origin + "/index.html";
-    // window.location.href = window.location.origin + "/TechnoPharms/index.html";
-    redirectWithFallback(window.location.origin + "/index.html",window.location.origin + "/TechnoPharms/index.html")
-});
