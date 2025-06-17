@@ -683,3 +683,9 @@ footer {
         font-size: 14px;
     }
 }
+
+@media (max-width: 380px) {
+  .logo-text {
+    display: none;
+  }
+}
