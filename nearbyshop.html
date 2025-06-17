@@ -17,21 +17,17 @@
             <img src="src/logo2.avif" alt="" srcset="" id="imgLogo" loading="lazy">Techno Pharms
         </div>
         <div class="buttons">
-            <div class="navButton" id="solution">Solution</div>
+            <div class="navButton" onclick="window.location.href =  'solution.html';">Solution</div>
             <div class="navButton activePage" id="NearByShop">NearByShop</div>
-            <div class="navButton" id="Login">Login</div>
-            </div>
+            <div class="navButton" onclick="window.location.href =  'login.html';">Login</div>
+        </div>
         </div>
     </nav>
 
     <div class="sapLine"></div>
     <marquee>Click On Your Nearest Shop Marker For More Details About Shop.</marquee>
     <div id="map"></div>
-    <!-- <div id="results">
-        <h3>Shops Nearest To You:</h3>
-        <ul id="shopList"></ul>
-    </div> -->
-
+    
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/nearbyshop.js"></script>

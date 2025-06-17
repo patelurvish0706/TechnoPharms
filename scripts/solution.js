@@ -1,29 +1,42 @@
-const API_KEY = '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';
+const API_KEY = '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';
 const YT_API_KEY = 'AIzaSyBbSaGqJvWNdOJnwA58VoIIUXsBA1ZD8Pc';
 
 
 // -------------------- Event Listener for "giveSolution" Button --------------------
-document.addEventListener('DOMContentLoaded', () => {
-    const solutionBtn = document.getElementById('giveSolution');
-    if (solutionBtn) {
-        solutionBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            const userInput = document.getElementById('prob-states').value.trim();
+// document.addEventListener('DOMContentLoaded', () => {
+//     const solutionBtn = document.getElementById('giveSolution');
+//     if (solutionBtn) {
+//         solutionBtn.addEventListener('click', function (e) {
+//             e.preventDefault();
+//             const userInput = document.getElementById('prob-states').value.trim();
+//             if (!userInput) {
+//                 alert("Please enter your device's issue.");
+//                 return;
+//             }
+//             sessionStorage.setItem('initialQuery', userInput);
+//             sessionStorage.setItem('initialProcessed', 'false');
+//             sessionStorage.removeItem('youtubePrompt');
+
+//             // window.location.href = 'solution.html';
+//             // window.location.href = window.location.origin + "/TechnoPharms/solution.html";
+//             redirectWithFallback('../solution.html', window.location.href = window.location.origin + "/TechnoPharms/solution.html")
+//         });
+//     }
+// });
+
+function giveSolution(event) {
+    event.preventDefault();
+    const userInput = document.getElementById('prob-states').value.trim();
             if (!userInput) {
                 alert("Please enter your device's issue.");
                 return;
+            }else{
+                window.location.href = 'solution.html';
             }
             sessionStorage.setItem('initialQuery', userInput);
             sessionStorage.setItem('initialProcessed', 'false');
             sessionStorage.removeItem('youtubePrompt');
-
-            // window.location.href = 'solution.html';
-            // window.location.href = window.location.origin + "/TechnoPharms/solution.html";
-            redirectWithFallback('../solution.html', window.location.href = window.location.origin + "/TechnoPharms/solution.html")
-        });
-    }
-});
-
+}
 
 const initialQuery = sessionStorage.getItem('initialQuery');
 let youtubeSearchPrompt = sessionStorage.getItem('youtubePrompt');
@@ -44,7 +57,7 @@ if (initialQuery && !hasInitialQueryProcessed) {
             messages: [
                 {
                     role: 'system',
-                    content: 'Convert this into a short YouTube search query. Reply with only the search prompt, nothing else.'
+                    content: 'Convert this laptop/android/iphone or any specific device issue into a short YouTube search query. Reply with only the search prompt, nothing else.'
                 },
                 {
                     role: 'user',
@@ -294,10 +307,4 @@ document.getElementById("back").addEventListener("click", function () {
     // window.location.href = window.location.origin + "/index.html";
     // window.location.href = window.location.origin + "/TechnoPharms/index.html";
     redirectWithFallback(window.location.origin + "/index.html",window.location.origin + "/TechnoPharms/index.html")
-});
-
-document.getElementById("NearByShop").addEventListener("click", function () {
-    // window.location.href = window.location.origin + "/NearByShop.html";
-    // window.location.href = window.location.origin + "/TechnoPharms/NearByShop.html";
-    redirectWithFallback(window.location.origin + "/NearByShop.html", window.location.origin + "/TechnoPharms/NearByShop.html")
 });

@@ -18,11 +18,11 @@
             <div class="navButton activePage" id="Home">Home</div>
             <div class="navButton" id="Login">Login
                 <div class="dropdown-content" id="dropdown">
-                    <div class="dropdown-option" id="goasUser">As a User</div>
-                    <div class="dropdown-option" id="goasShopkeeper">As a Shopkeeper</div>
+                    <div class="dropdown-option" onclick="window.location.href = 'login.html?role=user';">As a User</div>
+                    <div class="dropdown-option" onclick="window.location.href = 'login.html?role=shopkeeper';">As a Shopkeeper</div>
                 </div>
             </div>
-            <div class="navButton" id="Register">Register</div>
+            <div class="navButton" onclick="window.location.href = 'register.html?role=user';">Register</div>
         </div>
     </nav>
 
@@ -43,7 +43,7 @@
         <p>Tell us whats wrong with your device, we'll help you fix it.</p>
         <textarea name="prob-states" id="prob-states"
             placeholder="Describe your device's issue in detail (e.g 'My laptop makes buzzing sound when i turn it on and then shutdown unexpectedly', 'My smartphone screen is cracked and unresponsive after fall.')."></textarea>
-        <button type="submit" onclick="sessionStorage.clear();" id="giveSolution">Get My solution</button>
+        <button type="submit" onclick="sessionStorage.clear(); giveSolution(event);" id="giveSolution" >Get My solution</button>
     </section>
 
     
