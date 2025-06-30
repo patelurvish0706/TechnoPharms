@@ -51,7 +51,7 @@ https://patelurvish0706.github.io/TechnoPharms/  (For FrontEnd Only)
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/technopharms.git
+   git clone https://github.com/patelurvish0706/TechnoPharms.git
    cd technopharms
    ```
 
