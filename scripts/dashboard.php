@@ -133,9 +133,9 @@ $shopData = $result->fetch_assoc();
         <input type="number" name="shop_latitude" id="shop_latitude" step="any" required readonly value="<?= htmlspecialchars($shopData['shop_latitude'] ?? '') ?>">
 
         <label for="shop_longitude">Shop Longitude</label>
-        <input type="number" name="shop_longitude" id="shop_longitude" step="any" required readonly value="<?= htmlspecialchars($shopData['shop_longitude'] ?? '') ?>">
+        <input type="number" name="shop_longitude"  id="shop_longitude" step="any" required readonly value="<?= htmlspecialchars($shopData['shop_longitude'] ?? '') ?>">
 
-        <button type="submit">Save Shop Info</button>
+        <button type="submit" onclick="alert(`Your Data is Successfully Update.🎉`)">Save Shop Info</button>
     </form>
 
    </div>

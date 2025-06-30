@@ -1,21 +1,22 @@
-const API_KEY = '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';
-const YT_API_KEY = 'AIzaSyBbSaGqJvWNdOJnwA58VoIIUXsBA1ZD8Pc';
+// Change/replace API keys by your credential
 
+const API_KEY = 'sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+const YT_API_KEY = `AIxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 
 // -------------------- Event Listener for "giveSolution" Button --------------------
 
 function giveSolution(event) {
     event.preventDefault();
     const userInput = document.getElementById('prob-states').value.trim();
-            if (!userInput) {
-                alert("Please enter your device's issue.");
-                return;
-            }else{
-                window.location.href = 'solution.html';
-            }
-            sessionStorage.setItem('initialQuery', userInput);
-            sessionStorage.setItem('initialProcessed', 'false');
-            sessionStorage.removeItem('youtubePrompt');
+    if (!userInput) {
+        alert("Please enter your device's issue.");
+        return;
+    } else {
+        window.location.href = 'solution.html';
+    }
+    sessionStorage.setItem('initialQuery', userInput);
+    sessionStorage.setItem('initialProcessed', 'false');
+    sessionStorage.removeItem('youtubePrompt');
 }
 
 const initialQuery = sessionStorage.getItem('initialQuery');
@@ -63,6 +64,7 @@ if (initialQuery && !hasInitialQueryProcessed) {
 
 function fetchYouTubeVideos(prompt) {
     const container = document.getElementById('videoResults');
+    
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${encodeURIComponent(prompt)}&key=${YT_API_KEY}&type=video`;
 
     fetch(url)
@@ -253,12 +255,14 @@ window.addEventListener('DOMContentLoaded', async () => {
                 'X-Title': 'Simple AI Chat'
             },
             body: JSON.stringify({
-                model: 'meta-llama/llama-3.2-3b-instruct:free',
+                model: 'deepseek/deepseek-r1-0528-qwen3-8b:free',
                 messages: chatHistory
             })
         });
 
         const data = await response.json();
+    console.log(data);
+
         const aiReply = data.choices?.[0]?.message?.content || 'No response from AI.';
         chatHistory.push({ role: 'assistant', content: aiReply });
         sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
