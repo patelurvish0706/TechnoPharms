@@ -66,7 +66,7 @@ https://patelurvish0706.github.io/TechnoPharms/  (For FrontEnd Only)
    $conn = new mysqli("localhost", "root", "", "technopharms");
    ```
 
-4. **API keys**
+4. **API keys in `/script/solution.js`**
    ```
    🔑 Get YouTube API Key ▶️
 
