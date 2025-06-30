@@ -1,4 +1,4 @@
-# ⚙️ TechnoPharms — Digital Device Diagnosis & Local Technician Network
+# ⚙️ TechnoPharms — AI Powered, Device Solutions
 
 **TechnoPharms** is a hybrid web solution designed to help users diagnose and resolve issues related to **mobiles, laptops, and PCs** through a combination of **AI-driven chat**, **YouTube video suggestions**, and **direct technician (shopkeeper) support**.
 
@@ -66,12 +66,31 @@ https://patelurvish0706.github.io/TechnoPharms/  (For FrontEnd Only)
    $conn = new mysqli("localhost", "root", "", "technopharms");
    ```
 
-4. **Launch on browser**
+4. **API keys**
+   ```
+   🔑 Get YouTube API Key ▶️
+
+   1. Go to [Google Cloud Console]:https://console.cloud.google.com/
+   2. Click Select Project → New Project → Name it → Create.
+   3. Go to APIs & Services > Library.
+   4. Search for YouTube Data API v3 → Click → Enable.
+   5. Go to  APIs & Services > Credentials.
+   6. Click Create Credentials → Choose API Key.
+   7. Copy the API key shown.
+
+   🧠 Get OpenRouter API Key 🤖
+
+   1. Go to [OpenRouter.ai]: https://openrouter.ai/
+   2. Sign in using Google or GitHub.
+   3. Go to your profile → Click API Keys tab.
+   4. Click Create Key, name it → Copy the key.
+   ```
+
+5. **Launch on browser**
 
    ```
    http://localhost/technopharms/
    ```
-
 
 ## 📞 Shop Contact Feature
 
@@ -100,6 +119,7 @@ All listed shops include:
 * ⭐ Shop ratings/reviews
 * 📅 Appointment booking
 
+
 ## 🤝 Contribution
 
 PRs and suggestions welcome!
@@ -107,6 +127,8 @@ PRs and suggestions welcome!
 * Fork this repo
 * Create a new branch (`feature/xyz`)
 * Commit & open a PR
+
+---
 
 ## 📬 Contact
 
