@@ -1,8 +1,8 @@
 # ⚙️ TechnoPharms — AI Powered, Device Solutions
 
-**TechnoPharms** is a hybrid web solution designed to help users diagnose and resolve issues related to **mobiles, laptops, and PCs** through a combination of **AI-driven chat**, **YouTube video suggestions**, and **direct technician (shopkeeper) support**.
+### 📸Screenshots: [https://github.com/patelurvish0706/TechnoPharms/blob/main/screenshot.md]
 
-https://patelurvish0706.github.io/TechnoPharms/  (For FrontEnd Only)
+**TechnoPharms** is a hybrid web solution designed to help users diagnose and resolve issues related to **mobiles, laptops, and PCs** through a combination of **AI-driven chat**, **YouTube video suggestions**, and **direct technician (shopkeeper) support**.
 
 ## 💡 Key Features
 
