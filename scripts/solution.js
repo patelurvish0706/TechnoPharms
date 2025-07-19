@@ -1,7 +1,13 @@
 // Change/replace API keys by your credential
 
-const API_KEY = 'sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-const YT_API_KEY = `AIxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+// const API_KEY = 'sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+// const YT_API_KEY = `AIxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+// chnaged
+const API_KEY = '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';
+// const YT_API_KEY = 'AIzaSyBbSaGqJvWNdOJnwA58VoIIUXsBA1ZD8Pc';
+const YT_API_KEY = `AIzaSyB9xKvXLZuXoQ_hn8OcaB-BpaetSH0qyhM`
+
 
 // -------------------- Event Listener for "giveSolution" Button --------------------
 
